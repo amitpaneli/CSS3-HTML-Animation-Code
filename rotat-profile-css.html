@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rotating Profile Image Using CSS3 - Amit</title>
+	<style>
+		body {
+			font-family: Roboto;
+			overflow: hidden;
+		}
+
+		h1 { font-size: 22px; text-align: center; color:gray; }
+
+		.container {
+			background: #eee;
+			width:350px;
+			height: auto;
+			margin:0 auto;
+			border: solid 1px #ccc;
+			position: relative;
+			}
+		
+		.container .box-image {
+			position: relative;
+			transition: All 0.5s;
+			transform-origin: 95% 50% 0;
+			z-index: 1;
+		}
+
+		.container:hover .box-image { transform: rotate(-140deg); }
+		
+		.container .box-image:after {
+			content: "";
+			position: absolute;
+			top:50%;
+			left: 95%;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: #000;
+		}
+		
+		.container .box-image img {
+			width: 100%;
+			border-radius: 50%;
+		}
+		
+		.box-contain {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top:0;
+			left:0;
+			background: purple;
+			border-radius: 50%;
+			box-sizing: border-box;
+			padding: 70px 25px; 
+			text-align: center;
+			color:#fff; 
+		}
+	</style>
+</head>
+<body>
+	<h1> Rotating Profile Image Using CSS3 </h1>
+	<div class="container">
+		<div class="box-image">
+			<img src="image/amit1.jpg" alt="">	
+		</div>
+		<div class="box-contain">
+			<h3>Amit Mendapara</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, sed!</p>
+		</div>
+	</div>
+</body>
+</html>
