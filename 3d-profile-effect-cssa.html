@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3D Profile Effect CSS3</title>
+	<script src="https://kit.fontawesome.com/f92d759ba9.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body{font-family: Roboto;}
+		h3 {
+			text-align: center;
+
+		}
+		.container{
+			width:400px;
+			margin: 0 auto;
+			background: #ddd;
+			position: relative;
+			perspective: 1000px;
+		}
+		.container .img-box {
+			transform: rotateY(0);
+		}
+		.container:hover .img-box {
+			transform: rotateY(-90deg);
+			transition: all 0.8s;
+		}
+		
+		.container .img-box img {
+			width:100%;
+			height:100%;
+		}
+
+		.container .content{
+		 	width: 100%; height:100%;
+		 	position: absolute;
+		 	left: 0; top:0;
+		 	padding:60px 20px;
+		 	box-sizing: border-box;
+		 	transform: rotateY(90deg);
+		 	transition: all 0.5s;
+		 	background:rgb(0,0,0,0.6);
+		 	color:#fff;
+		}
+		.container .content a{
+			color:#fff;
+			padding: 5px;
+			font-size: 20px;
+		}
+		.container:hover .content{
+			transform: rotateY(0);
+			transition: all 0.8s;
+			transition-delay: 0.2s;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<h3>3D Profile Effect Using CSS3</h3>
+	<div class="container">
+		<div class="img-box">
+			<img src="image/amit1.jpg" alt="">
+		</div>
+
+		<div class="content">
+			<h3>Amit Mendapara</h3>
+			<p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Nulla quos accusamus veniam rerum. Quas, quos dignissimos libero aliquid similique iure commodi, ipsam blanditiis. Voluptatum, quibusdam?</p>
+			<hr>
+<!--Start: Social Media -->			
+			<a href="#"><i class="fab fa-facebook-square"></i></a>
+			<a href="#"><i class="fab fa-twitter-square"></i></a>
+			<a href="#"><i class="fab fa-instagram-square"></i></a>		
+<!--End: Social Media -->						
+		</div>
+	</div>
+</body>
+</html>
