@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css"> 
+	body{font-family: Roboto; margin:0 auto;}
+	h1 {font-size: 18px; text-align: center;}
+
+	.box{
+		width:300px;
+		border:solid 1px #ddd;	
+		margin:0 auto;
+		position: relative;
+	}
+
+	.box img {
+		width:100%;
+		height: auto;
+		transition: all .5s;
+	}
+	.box:hover  img {
+		transform: scale(0);
+	}
+
+	.box .box-content{
+		background: purple;
+		color: #fff;
+		position: absolute;
+		left: 0; top:0;
+		height: 100%; width:100%;
+		padding: 30px;
+		box-sizing: border-box;
+		transform: scale(0) rotate(-180deg);	
+		transition: all 0.5s
+	}
+
+	.box:hover .box-content{
+	opacity: 1;
+	transform: scale(1) rotate(0);
+	transition-delay: 0.2s;
+
+}
+	</style>
+		
+</head>
+<body>
+<div class="grid-container">
+	<h1> Zoom in-out Effect Using CSS3</h1>
+	<div class="box">
+		<div class="box-image">
+			<img src="image/amit.jpg" alt="">
+		</div>
+		<div class="box-content">
+			<h2>Amit Mendapara</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Repudiandae, commodi.</p>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
+
